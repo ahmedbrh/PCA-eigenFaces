@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    <meta name="description" content="This is an example of a meta description.">
+    <link rel="stylesheet" type="text/css" href="theme.css">
+  </head>
+  <body>
+    <div id="container">
+		  <div id="navBar">
+        <div id="buttonContain">
+        <button id="btnPage1"> Image compression</button>
+        <button id="btnPage2"> face recognizer</button>
+      </div>
+    </div>
+    <div id="content">
+      <div id="imageCompression">
+        <div id="imageContainer">
+          <img id="imgToCompress" src="http://127.0.0.1:5000/getImage?img=0" width="100%",height="100%">
+        </div>
+        <div id="ranges">
+          <div style="display:flex">
+            <label for="imageId">image selection</label>
+            <input type="range" id="imageId" min="0" max="965" value="0">
+            <label id="labelImgId">0</label>
+          </div>
+          <div style="display:flex">
+            <label for="compressionRate">Taux de compression ( nombre de vecteurs propres formant la base )</label>
+            <input type="range" id="compressionRate" min="0" max="965" value="30">
+            <label id="labelRate">30</label>
+          </div>
+          <button id="compressBtn">Compress !</button>
+        </div>
+        <div id="resultatCompression" >
+          <img id="imgResultatCompress" src="http://127.0.0.1:5000/compressImage?img=0&nbEig=30" width="100%",height="100%">
+        </div>
+      </div>
+      <div id="imgRecognizer" style="display:none">
+        <div id="imageContainer">
+          <p>unseen images : non utilisées lors du PCA, personnes non connues</p>
+          <img id="imgToClass" src="http://127.0.0.1:5000/getUnseenImage?img=0" width="100%",height="100%">
+        </div>
+        <div style="display:flex">
+          <label for="imageId">image selection</label>
+          <input type="range" id="imageId2" min="0" max="321" value="0">
+          <label id="labelImgId2">0</label>
+        </div>
+        <button id="classify">Classifier !</button>
+        <h2 style="color:red" id="classResult"></h2>
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
