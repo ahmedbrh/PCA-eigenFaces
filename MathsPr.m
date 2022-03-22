@@ -1,3 +1,6 @@
+
+% Partie 1 matlab ne pas prendre en coompte ce fichier 
+
 X1=[2.5 0.5 2.2 1.9 3.1 2.3 2 1 1.5 1.1];
 
 Y1=[ 2.4 0.7 2.9 2.2 3.0 2.7 1.6 1.1 1.6 0.9];
@@ -38,7 +41,7 @@ disp("Feature vector")
 disp(FV);
 
 %STEP 5
-%RowFeatureVector trasposé du feature vector
+%RowFeatureVector trasposÃ© du feature vector
 FV=transpose(FV);
 disp("RowFeatureVector");
 disp(FV);
